@@ -11,6 +11,7 @@ SELECT
   ROUND(SUM(turnover), 2) AS total_turnover,
   ROUND(SUM(purchase_cost), 2) AS total_purchase_cost,
   ROUND(SUM(turnover) - SUM(purchase_cost), 2) AS margin
+  ROUND(SUM(turnover_before_promo-turnover)-SUM(turnover),2) AS discount
 FROM 
   grounded-access-456814-a2.course14.gwz_sales
 GROUP BY 
